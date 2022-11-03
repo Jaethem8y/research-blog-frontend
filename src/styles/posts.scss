@@ -1,0 +1,15 @@
+.view-post-wrapper {
+  margin-top: 7em;
+  min-height: 88vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  .view-post-outer {
+    min-width: 80%;
+    padding: 1em;
+  }
+}
+h3,
+p {
+  word-wrap: break-word;
+}

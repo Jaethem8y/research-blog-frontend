@@ -1,0 +1,21 @@
+.admin-wrapper {
+  margin-top: 7em;
+  display: flex;
+  width: 100%;
+  min-height: 86vh;
+  .admin-content {
+    padding-left: 10em;
+    padding-right: 10em;
+    h5 {
+      margin-left: 1em;
+      margin-top: 1em;
+    }
+    p {
+      margin: 0;
+    }
+    .admin-links {
+      margin-left: 3em;
+    }
+  }
+}
+
