@@ -2,7 +2,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 
-import { HashRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "./components/home/Header";
 import Footer from "./components/home/Footer";
 import Home from "./pages/Home";
@@ -14,7 +14,7 @@ import Add from "./pages/Add";
 function App() {
   return (
     <div className="App">
-      <HashRouter>
+      <BrowserRouter>
         <Header />
         <Routes>
           <Route path="/admin/login" element={<Login />} />
@@ -27,7 +27,7 @@ function App() {
           <Route path="/" element={<Home />} />
         </Routes>
         <Footer />
-      </HashRouter>
+      </BrowserRouter>
     </div>
   );
 }
