@@ -24,7 +24,12 @@ export default function Login() {
     });
   };
   async function getData() {
-    const res = await axios.post(url + "auth/signin", loginInfo);
+    // const res = await axios.post(url + "auth/signin", loginInfo);
+    const res = await axios.post(url + "auth/signin", loginInfo, {
+      headers: {
+        accessControlAllowOrigin: "*",
+      },
+    });
     const token = res.data;
     localStorage.setItem("apiKey", "bearer " + token.access_token);
     console.log("getItem", localStorage.getItem("apiKey"));

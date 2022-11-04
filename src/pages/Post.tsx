@@ -17,7 +17,12 @@ export default function Post() {
         setLoading(true);
         setError(false);
         console.log(url + "post/" + title);
-        const res = await axios.get(url + "post/" + title);
+        // const res = await axios.get(url + "post/" + title);
+        const res = await axios.get(url + "post/" + title, {
+          headers: {
+            accessControlAllowOrigin: "*",
+          },
+        });
         setPost(res.data);
         setLoading(false);
       } catch (e) {

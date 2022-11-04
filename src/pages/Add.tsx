@@ -73,6 +73,7 @@ export default function Add() {
         accessControlAllowOrigin: "*",
       },
     });
+
     console.log(res.data);
   }
   async function addPost() {

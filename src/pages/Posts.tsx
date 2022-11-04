@@ -17,7 +17,12 @@ export default function Posts() {
       try {
         setLoading(true);
         setError(false);
-        const res = await axios.get(url + "posts/" + category);
+        // const res = await axios.get(url + "posts/" + category);
+        const res = await axios.get(url + "posts/" + category, {
+          headers: {
+            accessControlAllowOrigin: "*",
+          },
+        });
         setPosts(res.data);
         setLoading(false);
       } catch (e) {
