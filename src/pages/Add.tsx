@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "../styles/add.scss";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-import { Post, Content } from "../types/dto";
+import { Post } from "../types/dto";
 import { url } from "../config";
 import "../styles/post.scss";
 import { ChangeEvent } from "../types/changeEvent";
@@ -70,6 +70,7 @@ export default function Add() {
     const res = await axios.post(url + "post/add", post, {
       headers: {
         Authorization: localStorage.getItem("apiKey"),
+        accessControlAllowOrigin: "*",
       },
     });
     console.log(res.data);
