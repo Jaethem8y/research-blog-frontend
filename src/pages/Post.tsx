@@ -63,7 +63,7 @@ export default function Post() {
   return (
     <div className="view-content-wrapper">
       <div className="view-content-content">
-        <h3>Project Name : {post.title}</h3>
+        <h3>Post Name : {post.title}</h3>
         <div className="view-content-post">
           <p>Description: {post.description}</p>
         </div>
@@ -71,9 +71,15 @@ export default function Post() {
           {post.contents.map((content, i) => {
             return (
               <div className="view-content-inside" key={i}>
-                {content.header !== "" && <h4>{content.header}</h4>}
-                {content.writing !== "" && <p>{content.writing}</p>}
-                {content.tag !== "" && <p>{content.tag}</p>}{" "}
+                {content.header !== "" && content.header !== null && (
+                  <h4>{content.header}</h4>
+                )}
+                {content.writing !== "" && content.writing !== null && (
+                  <p>{content.writing}</p>
+                )}
+                {content.tag !== "" && content.tag !== null && (
+                  <p>{content.tag}</p>
+                )}{" "}
                 {content.link !== null && content.link !== "" && (
                   <a href={content.link}>{content.link}</a>
                 )}

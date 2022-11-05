@@ -6,7 +6,6 @@
   justify-content: center;
   white-space: pre-line;
   .view-content-content {
-    padding: 1em;
     width: 80%;
     margin: 0;
     .view-content-post {
@@ -21,9 +20,7 @@ b {
   word-wrap: break-word;
 }
 h4 {
-  margin: 0;
-  padding-top: 1em;
-  padding-bottom: 1em;
+  margin-top: 1em;
   word-wrap: break-word;
 }
 img {
